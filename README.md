@@ -5,6 +5,6 @@ Hopefully, I'm going to learn [ROS](http://www.ros.org/).
 
 **Packages:**
 
-servojoy - *subscribe to joy message, write servo angle to serial port*
+servojoy - *subscribe to joy message, write servo angle to serial port (arduino)*
 
 turtlejoy - *subscribe to joy message, publish twist message for turtlesim*
