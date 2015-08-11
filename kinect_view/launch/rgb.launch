@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find freenect_launch)/launch/freenect.launch" />
+
+  <node name="view" pkg="image_view" type="image_view" args="image:=/camera/rgb/image_raw" />
+</launch>
