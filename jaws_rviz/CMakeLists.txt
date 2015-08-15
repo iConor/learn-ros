@@ -103,16 +103,24 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-# add_executable(jaws_rviz_node src/jaws_rviz_node.cpp)
+add_executable(laps src/laps.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(jaws_rviz_node jaws_rviz_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(jaws_rviz_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(laps
+  ${catkin_LIBRARIES}
+)
+add_executable(paddle src/paddle.cpp)
+target_link_libraries(paddle
+  ${catkin_LIBRARIES}
+)
+add_executable(cruise src/cruise.cpp)
+target_link_libraries(cruise
+  ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##

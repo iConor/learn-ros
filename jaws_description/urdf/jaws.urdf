@@ -30,8 +30,6 @@
 
   <link name="base_dome">
     <visual>
-      <origin xyz="0.12 0 0" rpy="0 0 0" />
-
       <geometry>
         <sphere radius="0.06" />
       </geometry>
@@ -42,7 +40,7 @@
 
   <link name="base_endcap">
     <visual>
-      <origin xyz="-0.13 0 0" rpy="0 1.57 0" />
+      <origin xyz="-0.01 0 0" rpy="0 1.57 0" />
 
       <geometry>
         <cylinder radius="0.06" length="0.02" />
@@ -54,10 +52,10 @@
 
   <link name="aft_base">
     <visual>
-      <origin xyz="-0.15 0 -0.02" rpy="0 0 0"/>
+      <origin xyz="-0.02 0 -0.01" rpy="0 0 0" />
 
       <geometry>
-        <box size="0.02 0.02 0.02" />
+        <box size="0.04 0.02 0.03" />
       </geometry>
 
       <material name="dark" />
@@ -66,7 +64,7 @@
 
   <link name="aft_body">
     <visual>
-      <origin xyz="-0.18 0 -0.01" rpy="0 0 0"/>
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
 
       <geometry>
         <cylinder radius="0.02" length="0.06" />
@@ -78,20 +76,16 @@
 
   <link name="aft_dome">
     <visual>
-      <origin xyz="-0.18 0 -0.04" rpy="0 0 0"/>
-
       <geometry>
         <sphere radius="0.02" />
       </geometry>
 
-      <material name="light" />
+      <material name="dark" />
     </visual>
   </link>
 
   <link name="aft_duct">
     <visual>
-      <origin xyz="-0.18 0 0.04" rpy="0 0 0"/>
-
       <geometry>
         <cylinder radius="0.04" length="0.04" />
       </geometry>
@@ -102,10 +96,10 @@
 
   <link name="port_base">
     <visual>
-      <origin xyz="0.06 0.07 0" rpy="1.57 0 0"/>
+      <origin xyz="0 0.02 0" rpy="1.57 0 0" />
 
       <geometry>
-        <cylinder radius="0.01" length="0.02" />
+        <cylinder radius="0.01" length="0.06" />
       </geometry>
 
       <material name="dark" />
@@ -114,7 +108,7 @@
 
   <link name="port_body">
     <visual>
-      <origin xyz="0.06 0.10 -0.01" rpy="0 0 0"/>
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
 
       <geometry>
         <cylinder radius="0.02" length="0.06" />
@@ -126,20 +120,16 @@
 
   <link name="port_dome">
     <visual>
-      <origin xyz="0.06 0.10 -0.04" rpy="0 0 0"/>
-
       <geometry>
         <sphere radius="0.02" />
       </geometry>
 
-      <material name="light" />
+      <material name="dark" />
     </visual>
   </link>
 
   <link name="port_duct">
     <visual>
-      <origin xyz="0.06 0.10 0.04" rpy="0 0 0"/>
-
       <geometry>
         <cylinder radius="0.04" length="0.04" />
       </geometry>
@@ -150,10 +140,10 @@
 
   <link name="stbd_base">
     <visual>
-      <origin xyz="0.06 -0.07 0" rpy="1.57 0 0"/>
+      <origin xyz="0 -0.02 0" rpy="1.57 0 0" />
 
       <geometry>
-        <cylinder radius="0.01" length="0.02" />
+        <cylinder radius="0.01" length="0.06" />
       </geometry>
 
       <material name="dark" />
@@ -162,7 +152,7 @@
 
   <link name="stbd_body">
     <visual>
-      <origin xyz="0.06 -0.10 -0.01" rpy="0 0 0"/>
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
 
       <geometry>
         <cylinder radius="0.02" length="0.06" />
@@ -174,20 +164,16 @@
 
   <link name="stbd_dome">
     <visual>
-      <origin xyz="0.06 -0.10 -0.04" rpy="0 0 0"/>
-
       <geometry>
         <sphere radius="0.02" />
       </geometry>
 
-      <material name="light" />
+      <material name="dark" />
     </visual>
   </link>
 
   <link name="stbd_duct">
     <visual>
-      <origin xyz="0.06 -0.10 0.04" rpy="0 0 0"/>
-
       <geometry>
         <cylinder radius="0.04" length="0.04" />
       </geometry>
@@ -197,71 +183,87 @@
   </link>
 
   <joint name="base-dome" type="fixed">
+    <origin xyz="0.12 0 0" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="base_dome" />
   </joint>
 
   <joint name="base-endcap" type="fixed">
+    <origin xyz="-0.12 0 0" rpy="0 0 0" />    
     <parent link="base_link" />
     <child link="base_endcap" />
   </joint>
 
   <joint name="base-aft" type="fixed">
-    <parent link="base_link" />
+    <origin xyz="-0.02 0 0" rpy="0 0 0" />
+    <parent link="base_endcap" />
     <child link="aft_base" />
   </joint>
 
   <joint name="aft-body" type="fixed">
+    <origin xyz="-0.05 0 0" rpy="0 0 0"/>
     <parent link="aft_base" />
     <child link="aft_body" />
   </joint>
 
   <joint name="aft-dome" type="fixed">
+    <origin xyz="0 0 -0.04" rpy="0 0 0"/>
     <parent link="aft_body" />
     <child link="aft_dome" />
   </joint>
 
   <joint name="aft-duct" type="fixed">
+    <origin xyz="0 0 0.04" rpy="0 0 0"/>
     <parent link="aft_body" />
     <child link="aft_duct" />
   </joint>
 
-  <joint name="port-base" type="fixed">
+  <joint name="port-base" type="continuous">
+    <origin xyz="0.06 0.06 0" rpy="0 0 0"/>
     <parent link="base_link" />
     <child link="port_base" />
+    <axis xyz="0 1 0" />
   </joint>
 
   <joint name="port-body" type="fixed">
+    <origin xyz="0 0.05 0" rpy="0 0 0"/>
     <parent link="port_base" />
     <child link="port_body" />
   </joint>
 
   <joint name="port-dome" type="fixed">
+    <origin xyz="0 0 -0.04" rpy="0 0 0"/>
     <parent link="port_body" />
     <child link="port_dome" />
   </joint>
 
   <joint name="port-duct" type="fixed">
+    <origin xyz="0 0 0.04" rpy="0 0 0"/>
     <parent link="port_body" />
     <child link="port_duct" />
   </joint>
 
-  <joint name="stbd-base" type="fixed">
+  <joint name="stbd-base" type="continuous">
+    <origin xyz="0.06 -0.06 0" rpy="0 0 0"/>
     <parent link="base_link" />
     <child link="stbd_base" />
+    <axis xyz="0 1 0" />
   </joint>
 
   <joint name="stbd-body" type="fixed">
+    <origin xyz="0 -0.05 0" rpy="0 0 0"/>
     <parent link="stbd_base" />
     <child link="stbd_body" />
   </joint>
 
   <joint name="stbd-dome" type="fixed">
+    <origin xyz="0 0 -0.04" rpy="0 0 0"/>
     <parent link="stbd_body" />
     <child link="stbd_dome" />
   </joint>
 
   <joint name="stbd-duct" type="fixed">
+    <origin xyz="0 0 0.04" rpy="0 0 0"/>
     <parent link="stbd_body" />
     <child link="stbd_duct" />
   </joint>
