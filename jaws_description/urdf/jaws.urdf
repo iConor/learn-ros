@@ -140,7 +140,7 @@
 
   <link name="stbd_base">
     <visual>
-      <origin xyz="0 -0.02 0" rpy="1.57 0 0" />
+      <origin xyz="0 0.02 0" rpy="1.57 0 0" />
 
       <geometry>
         <cylinder radius="0.01" length="0.06" />
@@ -244,14 +244,14 @@
   </joint>
 
   <joint name="stbd-base" type="continuous">
-    <origin xyz="0.06 -0.06 0" rpy="0 0 0"/>
+    <origin xyz="0.06 -0.06 0" rpy="0 0 3.14159"/>
     <parent link="base_link" />
     <child link="stbd_base" />
     <axis xyz="0 1 0" />
   </joint>
 
   <joint name="stbd-body" type="fixed">
-    <origin xyz="0 -0.05 0" rpy="0 0 0"/>
+    <origin xyz="0 0.05 0" rpy="0 0 0"/>
     <parent link="stbd_base" />
     <child link="stbd_body" />
   </joint>
