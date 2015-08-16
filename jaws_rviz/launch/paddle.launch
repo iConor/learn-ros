@@ -5,5 +5,5 @@
 
   <node name="paddle" pkg="jaws_rviz" type="paddle" />
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_rviz)/config/paddle.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_rviz)/config/paddle.rviz" required="true" />
 </launch>
