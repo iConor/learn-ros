@@ -1,0 +1,11 @@
+<launch>
+  <param name="robot_description" textfile="$(find jaws_description)/urdf/jaws.urdf" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <node name="joy" pkg="joy" type="joy_node" />
+
+  <node name="servos" pkg="jaws_joy" type="servos" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_joy)/config/servos.rviz"/>
+</launch>
