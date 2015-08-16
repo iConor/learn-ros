@@ -8,5 +8,5 @@
 
   <node name="map" pkg="gmapping" type="slam_gmapping" />
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find kinect_rviz)/config/all.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find kinect_rviz)/config/all.rviz" required="true" />
 </launch>

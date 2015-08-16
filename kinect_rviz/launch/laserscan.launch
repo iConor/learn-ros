@@ -3,5 +3,5 @@
 
   <node name="laserscan" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" args="image:=/camera/depth/image_raw" />
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find kinect_rviz)/config/ls.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find kinect_rviz)/config/ls.rviz" required="true" />
 </launch>
