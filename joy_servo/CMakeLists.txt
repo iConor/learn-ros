@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(servojoy)
+project(joy_servo)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -81,7 +81,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES servojoy
+#  LIBRARIES joy_servo
 #  CATKIN_DEPENDS roscpp sensor_msgs std_msgs
 #  DEPENDS system_lib
 )
@@ -98,23 +98,23 @@ include_directories(
 )
 
 ## Declare a cpp library
-# add_library(servojoy
-#   src/${PROJECT_NAME}/servojoy.cpp
+# add_library(joy_servo
+#   src/${PROJECT_NAME}/joy_servo.cpp
 # )
 
 ## Declare a cpp executable
-add_executable(servojoy_node src/servojoy_node.cpp)
-add_executable(servojoy_serial src/servojoy_serial.cpp)
+add_executable(angle src/angle.cpp)
+add_executable(serial src/serial.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(servojoy_node servojoy_generate_messages_cpp)
+# add_dependencies(joy_servo_node joy_servo_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(servojoy_node
+target_link_libraries(angle
   ${catkin_LIBRARIES}
 )
-target_link_libraries(servojoy_serial
+target_link_libraries(serial
   ${catkin_LIBRARIES}
 )
 
@@ -133,7 +133,7 @@ target_link_libraries(servojoy_serial
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS servojoy servojoy_node
+# install(TARGETS joy_servo joy_servo_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -158,7 +158,7 @@ target_link_libraries(servojoy_serial
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_servojoy.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_joy_servo.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

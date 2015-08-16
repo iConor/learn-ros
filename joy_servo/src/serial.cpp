@@ -29,7 +29,7 @@ public:
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "serial_node");
+  ros::init(argc, argv, "serial");
   SerialPort sp;
   sp.loop();
 }
