@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>turtlejoy</name>
+  <name>joy_turtlesim</name>
   <version>0.0.0</version>
-  <description>The turtlejoy package</description>
+  <description>The joy_turtlesim package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->

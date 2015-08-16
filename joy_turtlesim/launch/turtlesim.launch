@@ -1,0 +1,5 @@
+<launch>
+  <node name="joy" pkg="joy" type="joy_node" />
+  <node name="turtlesim" pkg="turtlesim" type="turtlesim" />
+  <node name="steering" pkg="joy_turtlesim" type="steering" />
+</launch>
