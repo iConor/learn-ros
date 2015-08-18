@@ -4,13 +4,13 @@
   <version>0.0.0</version>
   <description>The jaws_description package</description>
 
-  <maintainer email="cary.42@osu.edu">conor</maintainer>
+  <maintainer email="cary.42@osu.edu">Conor Cary</maintainer>
 
   <license>BSD</license>
 
   <!-- <url type="website">http://wiki.ros.org/jaws_description</url> -->
 
-  <author email="cary.42@osu.edu">Jane Doe</author>
+  <author email="cary.42@osu.edu">Conor Cary</author>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>urdf</build_depend>
