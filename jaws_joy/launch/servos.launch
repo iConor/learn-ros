@@ -7,5 +7,5 @@
 
   <node name="servos" pkg="jaws_joy" type="servos" />
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_joy)/config/servos.rviz" required="true" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_joy)/config/base.rviz" required="true" />
 </launch>

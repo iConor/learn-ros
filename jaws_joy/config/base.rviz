@@ -176,7 +176,7 @@ Visualization Manager:
       Pitch: 0.785398
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.785398
+      Yaw: 3.14159
     Saved: ~
 Window Geometry:
   Displays:
@@ -194,5 +194,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 55
-  Y: 40
+  X: 4086
+  Y: 121
