@@ -3,7 +3,7 @@
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
-  <node name="cruise" pkg="jaws_rviz" type="cruise" />
+  <node name="laps_both" pkg="jaws_tf" type="laps_both" />
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_rviz)/config/isometric.rviz" required="true" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_rviz)/config/isometric-x5.rviz" required="true" />
 </launch>

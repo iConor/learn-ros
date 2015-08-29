@@ -1,7 +1,7 @@
 #include <ros/ros.h>
 #include <sensor_msgs/JointState.h>
 
-class Laps
+class NoLaps
 {
   private:
     ros::NodeHandle nh;
@@ -12,18 +12,18 @@ class Laps
     double port;
     double stbd;
   public:
-    Laps();
+    NoLaps();
     void loop();
 };
 
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "state_publisher");
-  Laps laps;
-  laps.loop();
+  NoLaps nolaps;
+  nolaps.loop();
 }
 
-Laps::Laps() : nh()
+NoLaps::NoLaps() : nh()
 {
   pub = nh.advertise<sensor_msgs::JointState>("joint_states", 1);
 
@@ -34,7 +34,7 @@ Laps::Laps() : nh()
   stbd = 0.0;
 }
 
-void Laps::loop()
+void NoLaps::loop()
 {
   ros::Rate rate(refresh_rate);
   while(ros::ok())
@@ -50,8 +50,8 @@ void Laps::loop()
 
     pub.publish(js);
 
-    port += one_degree / 4;
-    stbd += one_degree / 2;
+    port += one_degree / 2;
+    stbd += one_degree / 4;
 
     rate.sleep();
   }

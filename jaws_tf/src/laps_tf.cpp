@@ -35,7 +35,7 @@ Laps::Laps() : nh()
   angle = 0.0;
 
   depth = -1;
-  radius = 5;
+  radius = 1;
 }
 
 void Laps::loop()
@@ -53,7 +53,7 @@ void Laps::loop()
 
     bcast.sendTransform(tform);
 
-    angle += one_degree / 4;
+    angle += one_degree / 2;
 
     rate.sleep();
   }
