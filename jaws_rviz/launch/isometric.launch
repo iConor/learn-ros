@@ -4,5 +4,7 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_rviz)/config/static.rviz" required="true" />
+  <node name="static_transform" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 odom base_link 100" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_rviz)/config/isometric.rviz" required="true" />
 </launch>

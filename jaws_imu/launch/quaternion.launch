@@ -8,5 +8,5 @@
 
   <node name="quaternion" pkg="jaws_imu" type="quaternion" />
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_imu)/config/quaternion.rviz" required="true" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_rviz)/config/isometric.rviz" required="true" />
 </launch>
