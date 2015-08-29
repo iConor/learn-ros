@@ -38,7 +38,7 @@ void Translation::callback(const sensor_msgs::Joy::ConstPtr& joy)
 
   tform.transform.translation.x = joy->axes[1] / 16.0;
   tform.transform.translation.y = joy->axes[0] / 16.0;
-  tform.transform.translation.z = joy->axes[3] / 16.0;
+  tform.transform.translation.z = (joy->axes[14] - joy->axes[15]) / 16.0;
 
   bcast.sendTransform(tform);
 }

@@ -34,9 +34,9 @@ void Servos::callback(const sensor_msgs::Joy::ConstPtr& joy)
   js.name.resize(2);
   js.position.resize(2);
   js.name[0] ="port-base";
-  js.position[0] = joy->axes[2] * 0.7853975;
+  js.position[0] = joy->axes[2] * -0.7853975;
   js.name[1] ="stbd-base";
-  js.position[1] = joy->axes[2] * 0.7853975;
+  js.position[1] = joy->axes[2] * -0.7853975;
 
   pub.publish(js);
 }

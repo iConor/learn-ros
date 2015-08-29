@@ -103,24 +103,22 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-add_executable(servos src/servos.cpp)
-add_executable(orientation src/orientation.cpp)
-add_executable(translation src/translation.cpp)
+add_executable(joint_pub_joy src/joint_pub_joy.cpp)
+add_executable(tf_orientation src/tf_orientation.cpp)
+add_executable(tf_translation src/tf_translation.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(jaws_joy_node jaws_joy_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(servos
+target_link_libraries(joint_pub_joy
   ${catkin_LIBRARIES}
 )
-
-target_link_libraries(orientation
+target_link_libraries(tf_orientation
   ${catkin_LIBRARIES}
 )
-
-target_link_libraries(translation
+target_link_libraries(tf_translation
   ${catkin_LIBRARIES}
 )
 

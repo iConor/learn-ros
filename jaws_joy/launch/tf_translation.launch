@@ -5,7 +5,7 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
   <node name="joy" pkg="joy" type="joy_node" />
-  <node name="translation" pkg="jaws_joy" type="translation" />
+  <node name="tf_translation" pkg="jaws_joy" type="tf_translation" />
 
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_rviz)/config/isometric.rviz" required="true" />
 </launch>

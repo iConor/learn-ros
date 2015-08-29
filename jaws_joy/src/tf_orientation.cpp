@@ -45,7 +45,7 @@ void Orientation::callback(const sensor_msgs::Joy::ConstPtr& joy)
 {
   roll = joy->axes[2] * -0.7853975;
   pitch = joy->axes[3] * 0.7853975;
-  yaw = joy->axes[0] * 0.7853975;
+  yaw = (joy->axes[13] - joy->axes[12]) * 0.7853975;
 
   tform.header.stamp = ros::Time::now();
 
