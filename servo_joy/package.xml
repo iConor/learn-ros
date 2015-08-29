@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>joy_servo</name>
+  <name>servo_joy</name>
   <version>0.0.0</version>
   <description>The joy_servo package</description>
 

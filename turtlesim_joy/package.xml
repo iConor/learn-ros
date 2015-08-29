@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>joy_turtlesim</name>
+  <name>turtlesim_joy</name>
   <version>0.0.0</version>
   <description>The joy_turtlesim package</description>
 
