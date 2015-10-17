@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Run 'source ~/.bashrc'
-# Then, make a workspace:
+# To make a workspace:
 
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
