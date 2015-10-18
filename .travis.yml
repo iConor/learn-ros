@@ -1,0 +1,22 @@
+sudo: required
+dist: trusty
+language: generic
+compiler:
+  - gcc
+install:
+  - sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
+  - wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+  - sudo apt-add-repository -y ppa:falk-t-j/qtsixa
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq -y ros-indigo-desktop-full python-rosdep python-catkin-tools
+  - sudo rosdep init
+  - rosdep update
+  - sudo apt-get install -qq -y sixad ros-indigo-usb-cam ros-indigo-joy freenect ros-indigo-freenect-launch ros-indigo-depthimage-to-laserscan ros-indigo-slam-gmapping
+script:
+  - source /opt/ros/indigo/setup.bash
+  - mkdir -p ~/catkin_ws/src
+  - cd ~/catkin_ws/src
+  - ln -s $TRAVIS_BUILD_DIR .
+  - catkin_init_workspace
+  - cd ..
+  - catkin build --limit-status-rate 0.1 --no-notify -DCMAKE_BUILD_TYPE=Release
