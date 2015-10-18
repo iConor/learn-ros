@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find freenect_launch)/launch/freenect.launch" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find learn_kinect)/config/pointcloud2.rviz" required="true" />
+</launch>

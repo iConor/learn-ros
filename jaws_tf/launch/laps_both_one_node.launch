@@ -1,9 +1,0 @@
-<launch>
-  <param name="robot_description" textfile="$(find jaws_description)/urdf/jaws.urdf" />
-
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-
-  <node name="laps_both" pkg="jaws_tf" type="laps_both" />
-
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jaws_rviz)/config/isometric-x5.rviz" required="true" />
-</launch>

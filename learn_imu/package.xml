@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <name>learn_imu</name>
+  <version>0.0.0</version>
+  <description>The learn_imu package</description>
+
+  <maintainer email="cary.42@osu.edu">Conor Cary</maintainer>
+
+  <license>BSD</license>
+
+  <!-- <url type="website">http://wiki.ros.org/jaws_imu</url> -->
+
+  <author email="cary.42@osu.edu">Conor Cary</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>imu_3dm_gx4</build_depend>
+  <build_depend>tf</build_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>imu_3dm_gx4</run_depend>
+  <run_depend>tf</run_depend>
+
+  <export>
+  </export>
+</package>
