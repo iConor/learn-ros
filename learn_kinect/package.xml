@@ -14,6 +14,11 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <run_depend>freenect_launch</run_depend>
+  <run_depend>depthimage_to_laserscan</run_depend>
+  <run_depend>gmapping</run_depend>
+  <run_depend>rtabmap_ros</run_depend>
+
   <export>
   </export>
 </package>
